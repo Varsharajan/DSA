@@ -18,15 +18,16 @@ class Solution {
              }
                
          }
-         int x = result.size()-1;
-         for(int i = x;i>=0;i--)
+         
+         for(int i = result.size()-1;i>=0;i--)
          {
-             if(result[i]==(n/result[i]))
-                continue;
-              cout<<n/result[i]<<" ";
+             int x = n/result[i];
+               if(x!=result[i])
+                  cout<<n/result[i]<<" ";
          }
          
     }
+ //   TC =O(sqrt(n))  sc = O(sqrt(n))
 };
 
 
