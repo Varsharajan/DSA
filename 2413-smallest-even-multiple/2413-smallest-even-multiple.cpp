@@ -6,4 +6,5 @@ public:
         else
           return n*2;
     }
+ //   TC=O(n) SC=O(n)
 };
