@@ -18,22 +18,22 @@ class Solution{
         {
             if(sieve[i])
             {
-                
                 for(int j=i*i;j<=n;j+=i)
                 {
                     sieve[j]= false;
                 }
             }
         }
-      for(int i=2;i<=n;i++)
+       for(int i=2;i<=n;i++)
        {
            if(sieve[i])
            {
-               sum+=i;
+                sum+=i;
            }
        }
        return sum;
    	}    
+   	//TC = O(N*log(log(N))) SC =O(N)
 };
 
 
