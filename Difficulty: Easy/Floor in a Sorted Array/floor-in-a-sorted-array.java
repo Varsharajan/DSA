@@ -10,7 +10,7 @@ import java.util.HashMap;
 class Solution {
 
     static int findFloor(int[] arr, int x) {
-       int result =-1;
+        int result =-1;
        int start =0, end = arr.length-1;
        while(start<=end)
        {
