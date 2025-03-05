@@ -24,4 +24,4 @@ class Solution {
         return -1;
 
     }
-}
+}// O(logn) SC =O(1)
