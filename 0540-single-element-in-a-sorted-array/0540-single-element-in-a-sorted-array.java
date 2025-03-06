@@ -8,16 +8,16 @@ class Solution {
                return nums[mid];
             else if(mid>0 && nums[mid]==nums[mid-1])
               {
-                int leftEle = mid-1-start;
-                if(leftEle%2==0)
+                int leftSize = mid-1-start;
+                if(leftSize%2==0)
                    start = mid+1;
                 else
                    end = mid-2;
               }
             else
             {
-                int rightEle = end-mid+1;
-                if(rightEle%2==0)
+                int rightSize= end-mid+1;
+                if(rightSize%2==0)
                    end = mid-1;
                 else
                   start = mid+2;
