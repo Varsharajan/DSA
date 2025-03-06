@@ -32,36 +32,34 @@ class Sorting {
 class Solution {
     // Function to sort an array using quick sort algorithm.
     static void quickSort(int arr[], int low, int high) {
-         if(low>=high)
-           return;
-         int pindex = partition(arr,low,high);
-         quickSort(arr,low,pindex-1);
-         quickSort(arr,pindex+1,high);
-         
-         
+       if(low>=high)
+          return;
+       int pIndex = partition(arr,low,high);
+       quickSort(arr,low,pIndex-1);
+       quickSort(arr,pIndex+1,high);
+       
     }
 
     static int partition(int arr[], int low, int high) {
         int pivot = arr[high];
-        int pindex =low;
-        for(int i=low;i<=high-1;i++)
+        int pivotIndex = low;
+        for(int i = low;i<high;i++)
         {
-            if(arr[i]<=pivot)
+            if(arr[i]<pivot)
             {
-                swap(arr,i,pindex);
-                pindex++;
+                swap(arr,pivotIndex,i);
+                pivotIndex++;
             }
         }
-        swap(arr,pindex,high);
-        return pindex;
-    
+        
+        swap(arr,pivotIndex,high);
+        return pivotIndex;
     }
     
-    static void swap(int arr[],int i,int j)
+    static void swap(int arr[],int i ,int j)
     {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 }
-// TC =O(nlogn) sc= O(1)
