@@ -46,4 +46,4 @@ class Solution {
             return start;
              
     }
-}
+} // TC= O(logn) SC=O(1)
