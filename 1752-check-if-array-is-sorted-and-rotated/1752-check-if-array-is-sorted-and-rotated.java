@@ -10,4 +10,5 @@ class Solution {
         count++;
      return count<=1;
     }
-}
+} 
+// TC =O(n) SC =O(1)
