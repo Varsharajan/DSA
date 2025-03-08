@@ -19,6 +19,6 @@ class Solution {
             else
               end = mid-1;
          }
-         return -1;
+         return 0;
     }
-}
+} // TC =O(logn) SC=O(1)
