@@ -14,7 +14,7 @@ class Solution {
                 else
                    end = mid-2;
               }
-            else
+            else // [1,1,2,2,3,3,4,4,5]
             {
                 int rightSize= end-mid+1;
                 if(rightSize%2==0)
@@ -25,4 +25,4 @@ class Solution {
         }
         return -1;
     }
-}
+} // O(logn)SC =O(1)
