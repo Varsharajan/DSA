@@ -33,22 +33,18 @@ class GFG {
 
 class Solution {
     public static int[] lcmAndGcd(int a, int b) {
-        int ans[] = new int[2];
-        int originalA = a, originalB = b;
-        
-        while(a>0 && b>0) 
+        int originA=a, originB=b;
+        int[] result = new int[2];
+        while(a>0 && b>0)
         {
-          if(a>b)
-           a= a%b;
-         else if(b>a)
-          b =b%a;
+            if(a>b)
+               a%=b;
+            else
+               b%=a;
         }
-        if(a==0)
-          ans[1] =b;
-        if(b==0)
-          ans[1] = a;
-         ans[0] = (originalA*originalB)/ans[1];
-          return ans;
+          result[1] =  a==0?b:a;
+          result[0] = (originA*originB)/result[1];
+          return result;
     }
 }
 
