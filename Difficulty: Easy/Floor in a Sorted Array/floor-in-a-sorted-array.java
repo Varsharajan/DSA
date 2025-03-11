@@ -10,24 +10,23 @@ import java.util.HashMap;
 class Solution {
 
     static int findFloor(int[] arr, int x) {
-       int start =0, end = arr.length-1;
-       int result= -1;
-       while(start<=end)
-       {
-           int mid = start+(end-start)/2;
-           if(x>=arr[mid])
-           {
+        int start =0, end = arr.length-1;
+        int result =-1;
+        while(start<=end)
+        {
+            int mid = start+(end-start)/2;
+            if(arr[mid]<=x)
+            {
                result = mid;
-               start= mid+1;
-           }
-           else
+               start = mid+1;
+            }
+            else
                end = mid-1;
-           
-       }
+        }
         return result;
         
     }
-} //  TC =O(logn)
+}
 
 
 
