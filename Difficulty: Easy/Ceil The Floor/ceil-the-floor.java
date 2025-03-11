@@ -31,13 +31,13 @@ System.out.println("~");
 
 class Solution {
     public int[] getFloorAndCeil(int x, int[] arr) {
-        int floor = -1, ceil =-1;
-        for(int num:arr)
+        int floor =-1, ceil =-1;
+        for(int i =0;i<arr.length;i++)
         {
-            if(x>=num && num>=floor)
-                floor = num;
-            if(num>=x && (num<=ceil|| ceil ==-1))
-                ceil = num ;
+            if(arr[i]<=x && (arr[i]>=floor))
+               floor = arr[i];
+             if(arr[i]>=x && (ceil ==-1 || arr[i]<=ceil))
+               ceil = arr[i];
         }
         return new int[]{floor,ceil};
     }
