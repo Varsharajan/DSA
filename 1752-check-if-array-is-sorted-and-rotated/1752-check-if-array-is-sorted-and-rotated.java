@@ -1,14 +1,15 @@
 class Solution {
     public boolean check(int[] nums) {
-     int count =0, n= nums.length;
-     for(int i =1;i<n;i++)
-     {
-        if(nums[i]<nums[i-1])
-          count++;
-     }
-     if(nums[0]<nums[n-1])
-        count++;
-     return count<=1;
+        int end = nums.length-1;
+         int count =0;
+         for(int i =1;i<=end;i++)
+         {
+            if(nums[i]<nums[i-1])
+              count++;
+              
+         }
+         if(nums[0]<nums[end])
+           count++;
+         return count<=1;
     }
-} 
-// TC =O(n) SC =O(1)
+}
