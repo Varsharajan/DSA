@@ -9,9 +9,11 @@ class Solution {
             while(left<right)
             {
                 int sum = nums[i]+nums[left]+nums[right];
+                if(sum==target)
+                  return target;
                 if(Math.abs(target-sum)<Math.abs(target-closestSum))
                    closestSum = sum;
-                else if(sum<target)
+                if(sum<target)
                   left++;
                 else
                  right--;
