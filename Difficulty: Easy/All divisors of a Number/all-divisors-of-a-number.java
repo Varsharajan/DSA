@@ -27,21 +27,21 @@ System.out.println("~");
 
 class Solution {
     public static void print_divisors(int n) {
-       List<Integer> list1 = new ArrayList<>(); 
-       List<Integer> list2 = new ArrayList<>();
-        for(int i=1;i*i<=n;i++)
-        {
-            if(n%i==0)
-            {
-                list1.add(i);
-                if((n/i)!=i)
-                 list2.add(n/i);
-            }
-        }
-        
-        for(int i =0;i<list1.size();i++)
-          System.out.print(list1.get(i)+" ");
-        for(int i = list2.size()-1;i>=0;i--)
-           System.out.print(list2.get(i)+" ");
+      List<Integer> l1 = new ArrayList<>();
+      List<Integer> l2 = new ArrayList<>();
+      for(int i =1;i*i<=n;i++)
+      {
+          if(n%i==0)
+          {
+              l1.add(i);
+              if(i!=(n/i))
+                 l2.add(n/i);
+          }
+      }
+      for(int nums:l1)
+        System.out.print(nums+" ");
+      for(int i = l2.size()-1;i>=0;i--)
+        System.out.print(l2.get(i)+" ");
+      
     }
 }
