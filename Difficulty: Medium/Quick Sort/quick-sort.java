@@ -33,33 +33,33 @@ class Solution {
     // Function to sort an array using quick sort algorithm.
     static void quickSort(int arr[], int low, int high) {
        if(low>=high)
-          return;
-       int pIndex = partition(arr,low,high);
-       quickSort(arr,low,pIndex-1);
-       quickSort(arr,pIndex+1,high);
-       
+         return;
+       int partInd = partition(arr,low,high);
+       quickSort(arr,low,partInd-1);
+       quickSort(arr,partInd+1,high);
     }
 
     static int partition(int arr[], int low, int high) {
-        int pivot = arr[high];
-        int pivotIndex = low;
-        for(int i = low;i<high;i++)
-        {
-            if(arr[i]<pivot)
-            {
-                swap(arr,pivotIndex,i);
-                pivotIndex++;
-            }
-        }
-        
+         int pivot= arr[high];
+         int pivotIndex = low;
+         for(int i =low;i<high;i++)
+         {
+             if(arr[i]<=pivot)
+             {
+                 swap(arr,pivotIndex,i);
+                 pivotIndex++;
+             }
+                 
+             
+         }
         swap(arr,pivotIndex,high);
         return pivotIndex;
     }
     
-    static void swap(int arr[],int i ,int j)
+    static void swap(int arr[], int i, int j)
     {
         int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        arr[i]  = arr[j];
+        arr[j]  = temp;
     }
 }
