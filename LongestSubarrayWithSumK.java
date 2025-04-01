@@ -19,4 +19,4 @@ public class Solution {
 
 }
 }
-//TC =O(n) 
+//TC =O(n) SC= O(1)
