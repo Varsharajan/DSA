@@ -19,3 +19,4 @@ public class Solution {
 
 }
 }
+//TC =O(n) 
