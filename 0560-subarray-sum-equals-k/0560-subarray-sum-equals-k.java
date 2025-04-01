@@ -13,4 +13,4 @@ class Solution {
         }
         return ans;
     }
-}
+}// TC =O(n) Sc=O(n)
