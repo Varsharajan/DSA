@@ -1,31 +1,36 @@
 //{ Driver Code Starts
+// Initial Template for Java
 import java.io.*;
 import java.util.*;
+
+
+// } Driver Code Ends
+
+class Solution {
+    public static long sumOfDivisors(long n) {
+      long result =0;
+      for(long i =1;i<=n;i++)
+      {
+          result +=(n/i)*i;
+      }
+      return result;
+    }
+}
+
+
+//{ Driver Code Starts.
 
 class Main {
     public static void main(String args[]) throws IOException {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-- > 0) {
-            int N = sc.nextInt();
+            long n = sc.nextInt();
             Solution ob = new Solution();
-            int ans = ob.sumOfDivisors(N);
+            long ans = ob.sumOfDivisors(n);
             System.out.println(ans);
             System.out.println("~");
         }
     }
 }
-
 // } Driver Code Ends
-
-
-// User function Template for Java
-class Solution {
-    public static int sumOfDivisors(int n) {
-        int sum =0;
-        for(int i =1;i<=n;i++)
-         sum+=(n/i)*i;
-        return sum;
-            
-    }
-}
