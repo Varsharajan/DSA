@@ -34,32 +34,30 @@ class Solution {
     static void quickSort(int arr[], int low, int high) {
        if(low>=high)
          return;
-       int partInd = partition(arr,low,high);
-       quickSort(arr,low,partInd-1);
-       quickSort(arr,partInd+1,high);
+        int partIndex = partition(arr,low,high);
+        quickSort(arr,low,partIndex-1);
+        quickSort(arr,partIndex+1,high);
     }
 
     static int partition(int arr[], int low, int high) {
-         int pivot= arr[high];
-         int pivotIndex = low;
-         for(int i =low;i<high;i++)
-         {
-             if(arr[i]<=pivot)
-             {
-                 swap(arr,pivotIndex,i);
-                 pivotIndex++;
-             }
-                 
-             
-         }
-        swap(arr,pivotIndex,high);
-        return pivotIndex;
+       int pivotIndex = low, pivotele = arr[high];
+       for(int i = low;i<high;i++)
+       {
+           if(arr[i]<pivotele)
+           {
+               swap(arr,i,pivotIndex);
+               pivotIndex++;
+           }
+       }
+       swap(arr,pivotIndex,high);
+       return pivotIndex;
+       
     }
     
-    static void swap(int arr[], int i, int j)
+    static void swap(int arr[],int first, int second)
     {
-        int temp = arr[i];
-        arr[i]  = arr[j];
-        arr[j]  = temp;
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
     }
 }
