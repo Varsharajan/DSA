@@ -9,7 +9,7 @@ class Solution {
             else if(target>nums[mid])
                start = mid+1;
             else
-            end = mid-1;
+               end = mid-1;
         }
         return start;
     }
