@@ -1,11 +1,12 @@
 class Solution {
     public void rotate(int[] nums, int k) {
-        int n = nums.length-1;
-        if(n<1)
+        int n = nums.length;
+        if(n<2)
          return;
-        rotateArray(nums,0,n);
+         k%=n;
+        rotateArray(nums,0,n-1);
         rotateArray(nums,0,k-1);
-        rotateArray(nums,k,n);
+        rotateArray(nums,k,n-1);
     }
     void rotateArray(int[] nums,int start,int end)
     {
