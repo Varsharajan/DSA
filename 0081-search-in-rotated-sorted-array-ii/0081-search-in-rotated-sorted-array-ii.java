@@ -7,11 +7,11 @@ class Solution {
             if(nums[mid]==target)
                 return true;
             if(nums[start]==nums[mid] && nums[mid]==nums[end])
-            {
+             {
                 start++;
                 end--;
                 continue;
-            }
+             }
             if(nums[start]<=nums[mid])
             {
                 if(nums[start]<=target && target<nums[mid])
