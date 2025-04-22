@@ -4,7 +4,10 @@ class Solution {
         int[] result = new int[n];
         result[0]=1;
         for(int i =1;i<n;i++)
+        {
+           if(nums[i - 1] == 0) break;
            result[i] = nums[i-1]*result[i-1];
+        }
         for(int i =n-2;i>=0;i--)
         {
             suffix*=nums[i+1];
