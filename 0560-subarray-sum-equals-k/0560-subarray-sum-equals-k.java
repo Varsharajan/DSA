@@ -1,18 +1,16 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
-        HashMap<Integer,Integer> sum = new HashMap<>();
-        sum.put(0,1);
-        int count =0,totalSum =0;
-        for(int num:nums)
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int ans =0,sum =0;
+        for(int i =0;i<nums.length;i++)
         {
-            totalSum+=num;
-            if(sum.containsKey(totalSum-k))
-            {
-                count+=sum.get(totalSum-k);
-            }
-            sum.put(totalSum,sum.getOrDefault(totalSum,0)+1);
+            sum+=nums[i];
+            if(sum==k)
+              ans++;
+            if(map.containsKey(sum-k))
+               ans+=map.get(sum-k);
+            map.put(sum,map.getOrDefault(sum,0)+1);
         }
-    
-    return count;
-}
-}
+        return ans;
+    }
+}// TC =O(n) Sc=O(n)
