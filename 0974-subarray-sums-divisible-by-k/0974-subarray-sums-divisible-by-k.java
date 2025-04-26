@@ -7,6 +7,7 @@ class Solution {
        {
            totalSum+=nums[i];
            int mod = totalSum%k;
+           mod = mod<0?mod+k:mod;
            if(result.containsKey(mod))
            {
             count+=result.get(mod);
