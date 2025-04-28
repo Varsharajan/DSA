@@ -43,23 +43,21 @@ public class Main {
 
 class Solution {
     public int maximumSumSubarray(int[] arr, int k) {
-        int n = arr.length;
-        int result = Integer.MIN_VALUE;
-        int i=0,j =0,sum=0;
+        int i =0, j=0,n = arr.length;
+        int sum =0,totalsum=0;
         while(j<n)
         {
-            sum+=arr[j];
-            if(j-i+1 <k)
-              j++;
-            else if(j-i+1==k)
+            totalsum+=arr[j];
+            if(j-i+1==k)
             {
-                result = Math.max(sum, result);
-                sum-=arr[i];
-                i++;
-                j++;
+                if(totalsum>sum)
+                   sum =totalsum;
+                 totalsum-=arr[i];
+                 i++;
             }
-            
+            j++;
         }
-        return result;
+        return sum;
+        
     }
 }
