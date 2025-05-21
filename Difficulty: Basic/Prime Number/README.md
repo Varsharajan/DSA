@@ -1,4 +1,5 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/prime-number2314/1">Prime Number</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given a number <strong><code>n</code></strong>, determine whether it is a prime number or not. A prime number is a number greater than 1 that has no positive divisors other than 1 and itself.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/prime-number2314/1">Prime Number</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given a number <strong>n</strong>, determine whether it is a prime number or not. </span></p>
+<p><span style="font-size: 14pt;">A prime number is a number greater than 1 that has no positive divisors other than 1 and itself.</span></p>
 <p><span style="font-size: 14pt;"><strong>Examples :<br></strong></span></p>
 <pre><span style="font-size: 14pt;"><strong>Input: </strong>n = 7
 <strong>Output: </strong>true
